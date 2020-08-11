@@ -24,7 +24,16 @@ class PongPongWindow(pyglet.window.Window):
         self.clear()
         self.main_batch.draw()
 
+game_window = PongPongWindow(width=WIDTH, height=HEIGHT, caption='PongPong')
+game_objects = [game_window.ball, game_window.paddle]
+
+def update(dt):
+    global game_objects, game_window
+
+    for obj in game_objects:
+        obj.update(dt)
+
 
 if __name__ == '__main__':
-    game_window = PongPongWindow(width=WIDTH, height=HEIGHT, caption='PongPong')
+    pyglet.clock.schedule_interval(update, 1/120.0)
     pyglet.app.run()
