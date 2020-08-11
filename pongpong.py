@@ -34,7 +34,7 @@ def update(dt):
     global game_objects, game_window
 
     for obj in game_objects:
-        obj.update(game_window.win_size, BORDER, dt)
+        obj.update(game_window.win_size, BORDER)
 
 
 if __name__ == '__main__':
