@@ -1,5 +1,4 @@
-from . import util, ball, paddle, rectangle
-import random
+from . import ball, paddle, rectangle
 
 
 def load_balls(win_size, radius, batch=None):
