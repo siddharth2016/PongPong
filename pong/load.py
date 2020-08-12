@@ -1,19 +1,21 @@
 from . import ball, paddle, rectangle
 
 
-def load_balls(win_size, radius, batch=None):
+def load_balls(win_size, radius, speed, batch=None):
     balls = []
     ball_x = win_size[0]/2
     ball_y = win_size[1]/2
     new_ball = ball.BallObject(x=ball_x, y=ball_y, radius=radius, batch=batch)
-    new_ball.velocity_x, new_ball.velocity_y = -2, -2
+    new_ball.velocity_x, new_ball.velocity_y = speed[0], speed[1]
     balls.append(new_ball)
     return balls
 
 
-def load_paddles(paddle_pos, width, height, batch=None):
+def load_paddles(paddle_pos, width, height, acc, batch=None):
     paddles = []
     new_paddle = paddle.Paddle(x=paddle_pos[0], y=paddle_pos[1], width=width, height=height, batch=batch)
+    new_paddle.rightx = new_paddle.x + width
+    new_paddle.acc_left, new_paddle.acc_right = acc[0], acc[1]
     paddles.append(new_paddle)
     return paddles
 
