@@ -1,18 +1,14 @@
 from . import util, ball, paddle, rectangle
 import random
 
-BUFFER = 10
 
-def load_balls(win_size, radius, num_balls, paddle_pos, batch=None):
+def load_balls(win_size, radius, batch=None):
     balls = []
-    for i in range(num_balls):
-        ball_x, ball_y = paddle_pos
-        while util.distance((ball_x, ball_y), paddle_pos) < 200:
-            ball_x = random.randint(0, win_size[0]-radius-BUFFER)
-            ball_y = random.randint(0, win_size[1]-radius-BUFFER)
-        new_ball = ball.BallObject(x=ball_x, y=ball_y, radius=radius, batch=batch)
-        new_ball.velocity_x, new_ball.velocity_y = -2, -2
-        balls.append(new_ball)
+    ball_x = win_size[0]/2
+    ball_y = win_size[1]/2
+    new_ball = ball.BallObject(x=ball_x, y=ball_y, radius=radius, batch=batch)
+    new_ball.velocity_x, new_ball.velocity_y = -2, -2
+    balls.append(new_ball)
     return balls
 
 
