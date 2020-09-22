@@ -1,5 +1,6 @@
 import pyglet
 import random
+from typing import Tuple
 
 
 class BallObject(pyglet.shapes.Circle):
@@ -10,7 +11,7 @@ class BallObject(pyglet.shapes.Circle):
         self.velocity_x, self.velocity_y = 0.0, 0.0
         self.hit_count = 0
 
-    def update(self, win_size, border, other_object, dt):
+    def update(self, win_size: Tuple, border: Tuple, other_object, dt) -> None:
         speed = [2.37, 2.49, 2.54, 2.62, 2.71, 2.85, 2.96, 3.08, 3.17, 3.25]    # more choices more randomness
         rn = random.choice(speed)
         newx = self.x + self.velocity_x
