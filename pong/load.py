@@ -1,5 +1,5 @@
 from . import ball, paddle, rectangle
-from Typing import Tuple
+from typing import Tuple
 
 def load_balls(win_size : Tuple, radius : float, speed : Tuple, batch=None):
     balls = []
