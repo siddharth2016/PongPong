@@ -1,5 +1,0 @@
-{
-    "python.pythonPath": "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/bin/python3.8",
-    "python.linting.pylintEnabled": true,
-    "python.linting.enabled": true
-}
