@@ -39,6 +39,16 @@ for paddle in game_window.paddles:
 
 
 
-if __name__ == '__main__':
-    pyglet.app.run()
+def update(dt):
+    global game_objects, game_window
 
+    for obj1 in game_objects:
+        for obj2 in game_objects:
+            if obj1 is obj2:
+                continue
+            obj1.update(game_window.win_size, BORDER, obj2, dt)
+
+
+if __name__ == '__main__':
+    pyglet.clock.schedule_interval(update, 1/120.0)
+    pyglet.app.run()
