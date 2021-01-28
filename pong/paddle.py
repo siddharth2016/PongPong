@@ -15,10 +15,6 @@ class Paddle(pyglet.shapes.Rectangle):
         self.key_handler = key.KeyStateHandler()
         self.event_handlers = [self, self.key_handler]
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 99fc604062bf203e52bc87f41e1580b4288f6c02
     def update(self, win_size : Tuple, border : float, other_object, dt):
 
         newlx = self.x + self.acc_left

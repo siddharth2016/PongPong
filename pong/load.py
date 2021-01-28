@@ -3,10 +3,6 @@
 from . import ball, paddle, rectangle
 from typing import Tuple
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 99fc604062bf203e52bc87f41e1580b4288f6c02
 def load_balls(win_size : Tuple, radius : float, speed : Tuple, batch=None):
     balls = []
     ball_x = win_size[0]/2
