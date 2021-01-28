@@ -1,7 +1,7 @@
 from . import ball, paddle, rectangle
+from typing import Tuple
 
-
-def load_balls(win_size, radius, speed, batch=None):
+def load_balls(win_size : Tuple, radius : float, speed : Tuple, batch=None):
     balls = []
     ball_x = win_size[0]/2
     ball_y = win_size[1]/2
@@ -11,7 +11,7 @@ def load_balls(win_size, radius, speed, batch=None):
     return balls
 
 
-def load_paddles(paddle_pos, width, height, acc, batch=None):
+def load_paddles(paddle_pos : Tuple, width : float, height : float, acc : Tuple, batch=None):
     paddles = []
     new_paddle = paddle.Paddle(x=paddle_pos[0], y=paddle_pos[1], width=width, height=height, batch=batch)
     new_paddle.rightx = new_paddle.x + width
@@ -20,7 +20,7 @@ def load_paddles(paddle_pos, width, height, acc, batch=None):
     return paddles
 
 
-def load_rectangles(win_size, border, batch=None):
+def load_rectangles(win_size : Tuple, border : float, batch=None):
     rectangles = []
     top = rectangle.RectangleObject(x=0, y=win_size[1]-border, width=win_size[0], height=border, batch=batch)
     left = rectangle.RectangleObject(x=0, y=0, width=border, height=win_size[1], batch=batch)
