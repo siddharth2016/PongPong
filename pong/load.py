@@ -1,5 +1,8 @@
+# ./PongPong/pong/load.py
+
 from . import ball, paddle, rectangle
 from typing import Tuple
+
 
 def load_balls(win_size : Tuple, radius : float, speed : Tuple, batch=None):
     balls = []
