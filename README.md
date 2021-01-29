@@ -30,7 +30,7 @@ Install to your virtual environment or global using pip:
 
 *pip install pyglet*
 
-Run game, by running `pongpong.py` file and see the magic 🧙‍♂️
+Play game, by running `pongpong.py` file and see the magic 🧙‍♂️
 
 Game Play Demo on MacOS:
 
