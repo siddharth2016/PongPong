@@ -20,7 +20,7 @@ Go through the following parts to get familiar with pyglet game development styl
 
 I really loved writing my experience and how I approached the problem, hoping you will find it insightful, will learn something new and get to know basics of developing a game like PongPong.
 
-
+---
 
 Library used:
 
